@@ -1,8 +1,17 @@
 *免责声明：本工具仅用于安全研究，企业自查，严禁使用本工具对互联网造成破坏，感谢。 
+# 更新日志
 
+2020.5.27  
+1. nmap扫描增加参数，更准确的识别服务版本  
+2. 增加跳过开放大量端口ip问题 
+3. 支持单ip扫描   gg.py -i 127.0.0.1
 # GGSCAN
 渗透前资产探测工具  
-目前版本v1.0
+目前版本v1.1
+
+修改masscan扫描线程，在conf/目录下 info.conf 文件中
+
+不需要的模块 如title 和端口爆破模块 可以在gg.py 中注释掉最后的调用即可
 ## 使用环境
 
 ubuntu
@@ -15,8 +24,10 @@ python3
 目前仅限linux使用 windows平台环境配置比较复杂
 
 ## 使用方法
-
-`python3 gg.py 123.txt `
+批量扫描  
+`python3 gg.py 123.txt `  
+单ip扫描  
+`python3 gg.py -i 127.0.0.1`
 
 123.txt 中放ip列表 一个ip一行目前只支持ip
 
@@ -35,6 +46,4 @@ python3
 ## 联系方式
 有问题可以提交issues。
 
-微信：zanyryy
-欢迎各位老板支持
-![Image text](https://raw.githubusercontent.com/xiaoheiwo/GGSCAN/master/img/4.png)
+微信：zanyryy：
